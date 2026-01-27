@@ -1,0 +1,96 @@
+.grid{
+    display: grid;
+    width: 500px;
+    height: 600px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 20px;
+    
+}
+.header{
+    display:flex;
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    color: white;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.article{
+    display: flex;
+    background-color: blue;
+    width: 50%;
+    height: 100%;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: white;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+
+}
+.texto{
+    display: flex;
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    color: white;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+}
+.texto2{
+    display: flex;
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    color: white;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    display: flex;
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    grid-row-start: 6;
+    grid-row-end: 8;
+    grid-column-start: 1;
+    grid-column-end: 3;
+     color: white;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+}
+.footer{
+    display: flex;
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    grid-column-start: 1;
+    grid-column-end: 3;
+     color: white;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,9 @@
+// Definição
+$primary-color: #3498db;
+$font-stack: Helvetica, sans-serif;
+
+// Uso
+body {
+color: $primary-color;
+font-family: $font-stack;
+}

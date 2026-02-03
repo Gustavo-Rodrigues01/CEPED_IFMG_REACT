@@ -1,0 +1,38 @@
+.body{
+    text-align: center;
+    justify-content: center;
+}
+.countainer{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    justify-content: center;
+    background-color: gray;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    margin:0 auto;
+}
+.countainer:hover{
+    background-color: rgb(116, 116, 116);
+     scale: 1.02;
+}
+.imagem{
+    border-radius: 5px;
+    margin: 25px;
+}
+.texto{
+    color: white;
+    text-align: justify;
+    margin: 25px;
+    font-weight: 300;
+    font-size:medium;
+}
+
+
+
+
+

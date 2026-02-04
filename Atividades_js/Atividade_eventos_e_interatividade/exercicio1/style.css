@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+}
+
+.titulo {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+}
+
+.fontSize {
+    font-size: 30px;
+}
+.fontSize1 {
+    font-size: 20px;
+}
+div#lista {
+    background-color: rgb(201, 198, 198);
+    width: 500px;
+    height: 500px;
+    margin:0 auto;
+    border-radius: 10px;
+}
+
+.button{
+    background-color: rgb(70, 45, 158);
+    color: white;
+    font-size: 15px;
+}

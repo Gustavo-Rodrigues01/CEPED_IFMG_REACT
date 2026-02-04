@@ -1,16 +1,16 @@
+function Card(props){ 
+  
+  return (
+    <div className="body">
+      <h1>{props.titulo}</h1>
 
-const Card = () => {
-
-    return(
-        <div className="body">
-            <h1>Card de produto</h1>
-            <div className="countainer">
-                <img src="youtube.jpg" className = "imagem"></img>
-                <h1>Youtube</h1>
-                <p className="texto">O YouTube é a maior plataforma de compartilhamento de vídeos do mundo, criada em 2005 e adquirida pelo Google em 2006. </p>
-            </div>
-        </div>
-    
-);
+      <div className="container">
+        <img src={props.imagem} className="imagem" alt={props.nome} />
+        <h2>{props.nome}</h2>
+        <p className="texto">{props.descricao}</p>
+      </div>
+    </div>
+  );
 };
-    ReactDOM.render(<Card />, document.getElementById('root'));
+
+export default Card;

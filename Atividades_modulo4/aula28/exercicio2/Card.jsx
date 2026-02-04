@@ -32,18 +32,17 @@ const Texto = styled.p`
     font-weight: 300;
     font-size:medium;
 `
-const Card = () => {
+function Card({titulo, imagem, nome, descricao}){
 
     return(
         <Body>
-            <h1>Card de produto</h1>
+            <h1>{titulo}</h1>
             <Countainer>
-                <Imagem src="youtube.jpg" className = "imagem"></Imagem>
-                <h1>Youtube</h1>
-                <Texto className="texto">O YouTube é a maior plataforma de compartilhamento de vídeos do mundo, criada em 2005 e adquirida pelo Google em 2006. </Texto>
+                <Imagem src={imagem} className = "imagem"></Imagem>
+                <h1>{nome}</h1>
+                <Texto className="texto">{descricao}</Texto>
             </Countainer>
         </Body>
-    
-);
+    );
 };
-    ReactDOM.render(<Card />, document.getElementById('root'));
+export default Card;

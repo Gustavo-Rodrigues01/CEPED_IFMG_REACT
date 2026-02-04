@@ -1,16 +1,29 @@
-function Card(props){ 
-  
-  return (
-    <div className="body">
-      <h1>{props.titulo}</h1>
+const Card = ({titulo, nome, imagem, descricao}) => {
 
-      <div className="container">
-        <img src={props.imagem} className="imagem" alt={props.nome} />
-        <h2>{props.nome}</h2>
-        <p className="texto">{props.descricao}</p>
-      </div>
-    </div>
-  );
+    return(
+        <div className="body">
+            <h1>{titulo}</h1>
+            <div className="countainer">
+                <img src={imagem} className = "imagem"></img>
+                <h1>{nome}</h1>
+                <p className="texto">{descricao}</p>
+            </div>
+        </div>
+    
+);
 };
+    ReactDOM.render(<Card />, document.getElementById('root'));
 
-export default Card;
+function App(){
+
+    return(
+        <Card
+            titulo="Card de produto"
+            nome="YouTube"
+            imagem="youtube.jpg"
+            descricao="O YouTube é a maior plataforma de compartilhamento de vídeos do mundo."
+        />
+    );
+   
+};
+ReactDOM.render(<App />, document.getElementById('root'));

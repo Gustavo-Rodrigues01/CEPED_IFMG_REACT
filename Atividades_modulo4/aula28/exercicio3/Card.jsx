@@ -8,7 +8,7 @@ function Card({ imagem, nome, descricao }) {
             className="
             flex flex-col justify-center
             w-[300px] h-[400px]
-            bg-gray-200 dark:bg-zinc-700
+            bg-gray-200 dark:bg-gray-600
             rounded-lg
             shadow-lg dark:shadow-white/50 
             transition-all duration-300 ease-out
@@ -26,7 +26,7 @@ function Card({ imagem, nome, descricao }) {
 
             <h2 className="text-2xl font-semibold text-center m-4">{nome}</h2>
 
-            <p className="text-black font-semibold text-sm text-justify m-6 dark:text-white">{descricao}</p>
+            <p className="font-semibold text-sm text-justify m-4 ">{descricao}</p>
 
         </div>
     </>
@@ -85,11 +85,11 @@ function App() {
           mt-6
           px-6 py-2
           rounded
-          bg-gray-200 dark:bg-zinc-800
+          bg-gray-100 dark:bg-zinc-800
           text-black dark:text-white
           transition-opacity duration-300
           hover:opacity-80
-        "
+        " 
       >
         {theme === "light" ? "Dark Mode" : "Light Mode"}
       </button>

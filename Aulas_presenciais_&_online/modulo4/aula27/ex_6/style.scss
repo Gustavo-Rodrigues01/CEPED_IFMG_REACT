@@ -1,0 +1,20 @@
+// Definindo o Mixin
+@mixin flex-center($direction: row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+@mixin important-text {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid blue;
+}
+    
+    // Utilizando o Mixin
+.container {
+    @include flex-center(column);
+    @include important-text;
+    background-color: green;
+}

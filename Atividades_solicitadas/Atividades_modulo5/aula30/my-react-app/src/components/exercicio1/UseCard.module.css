@@ -1,0 +1,40 @@
+.countainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    background-color: rgb(251, 251, 251);
+    margin:0 auto;
+    color:black;
+    border-radius: 10px;
+    margin: 0 auto;
+
+    
+}
+.img{
+    width: 150px;
+    height: 150px;
+}
+
+.status{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle_green{
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    border-radius: 100%;
+}
+
+.circle_gray{
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 100%;
+}

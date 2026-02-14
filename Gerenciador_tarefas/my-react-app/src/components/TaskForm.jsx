@@ -14,7 +14,7 @@ function TaskForm(props){
                 placeholder="add new task"
                 value={title}
                 onChange={(event)=> setTitle(event.target.value)}
-                onKeyDown={(e)=>{if(e.key==="Enter" && title != ""){
+                onKeyDown={(e)=>{if(e.key==="Enter" && title.trim() != ""){
                     props.taskAdd(title);
                     setTitle("");
                 }}}
@@ -22,7 +22,7 @@ function TaskForm(props){
 
 
                 <button 
-                onClick={()=> {if(title != ""){
+                onClick={()=> {if(title.trim() != ""){
                     props.taskAdd(title);
                     setTitle("");
                 }}} 

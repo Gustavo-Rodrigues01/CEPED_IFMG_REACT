@@ -7,7 +7,7 @@ function TaskForm(props){
         <div className="bg-blue-200 rounded-2xl flex flex-col p-4 space-y-2">
             <h1 className="text-3xl text-center">task form</h1>
             <div className="flex space-x-2">
-
+            
                 <input 
                 className="bg-white text-black rounded-md w-full p-2" 
                 type="text" 
@@ -19,7 +19,6 @@ function TaskForm(props){
                     setTitle("");
                 }}}
                 />
-
 
                 <button 
                 onClick={()=> {if(title.trim() != ""){

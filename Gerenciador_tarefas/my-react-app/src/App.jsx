@@ -1,27 +1,29 @@
+import { useEffect } from "react";
 import "./App.css"
 import TaskForm from "./components/TaskForm";
 import TaskItem from "./components/taskItem";
 import { useState } from "react";
 
-function App() {
-  const [tasks, setTasks] = useState([
-      {
-        id: 1,
-        title: "Estudar",
-        isCompleted:false
-      },
-      {
-        id: 2,
-        title: "fazer atividades",
-        isCompleted:false
-      },
-      {
-        id: 3,
-        title: "fazer lista de tarefas",
-        isCompleted: false
-      }
-    ]);
 
+function App() {
+
+//Inicializa a memoria de tasks puchando dados no localStorage
+  const [tasks, setTasks] = useState(()=>{
+    const storedTasks = localStorage.getItem("tasks");
+    return storedTasks ? JSON.parse(storedTasks) : [];
+  });
+//Titulo de documento dinamico "TaskMaster"
+  useEffect(() => {
+    const pendingTasks = tasks.filter(task => !task.isCompleted).length;
+    document.title = `TaskMaster (${pendingTasks} pendentes)`;
+  }, [tasks]);
+
+//Responsavel por alterar localStorage
+    useEffect(()=>{
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    },[tasks]);
+
+//Marca tasks como completas
     function taskComplet(taskId){
       const newTask = tasks.map(task => {
         if(task.id === taskId){
@@ -32,14 +34,16 @@ function App() {
       setTasks(newTask);
     }
 
+//Deleta tasks ja existentes
     function taskDelet(taskId){
       const newTask = tasks.filter(tasks => tasks.id !== taskId)
       setTasks(newTask)
     }
 
+//Adiciona novas tarefas
     function taskAdd(taskTitle){
       const newTask = {
-        id: tasks.length+1,
+        id: crypto.randomUUID(),
         title: taskTitle,
         isCompleted: false
       }

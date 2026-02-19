@@ -4,11 +4,10 @@ import { useState } from "react";
 function Clean(){
     const [count,setCount] = useState(0);
     useEffect(() => {
-    let timer = setTimeout(() => {
-      setCount(count + 1);
-    }, 1000);
-
-    return () => clearTimeout(timer)
+        let timer = setTimeout(() => {
+        setCount(count + 1);
+        }, 1000);
+        return () => clearTimeout(timer)
     }, []);
     
 

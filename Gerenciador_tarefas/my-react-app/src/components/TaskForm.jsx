@@ -1,11 +1,14 @@
 import { useState } from "react";
-function TaskForm(props){
-    const [title, setTitle] = useState("")
+import { useContext } from "react";
+import { TasksContext } from "./TasksBuild";
 
+function TaskForm(){
+    const [title, setTitle] = useState("")
+    const {taskAdd} = useContext(TasksContext);
 
     return(
         <div className="bg-blue-200 rounded-2xl flex flex-col p-4 space-y-2">
-            <h1 className="text-3xl text-center">task form</h1>
+            <h1 className="text-3xl text-center">Task form</h1>
             <div className="flex space-x-2">
             
                 <input 
@@ -15,14 +18,14 @@ function TaskForm(props){
                 value={title}
                 onChange={(event)=> setTitle(event.target.value)}
                 onKeyDown={(e)=>{if(e.key==="Enter" && title.trim() != ""){
-                    props.taskAdd(title);
+                    taskAdd(title);
                     setTitle("");
                 }}}
                 />
 
                 <button 
                 onClick={()=> {if(title.trim() != ""){
-                    props.taskAdd(title);
+                    taskAdd(title);
                     setTitle("");
                 }}} 
                 className="bg-white  text-black rounded-md w-[75px] h-[40px] shadow"

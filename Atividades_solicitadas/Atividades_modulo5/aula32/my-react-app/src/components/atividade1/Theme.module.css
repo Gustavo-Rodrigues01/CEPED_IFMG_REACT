@@ -1,0 +1,24 @@
+.light{
+    height: 250px;
+    font-size: large;
+    background-color: #999898;
+    color:#000;
+    padding: 20px;
+}
+.dark{
+    height: 250px;
+    font-size: large;
+    background-color: #000;
+    color:#fff;
+    padding: 20px;
+}
+.darkButton{
+    background-color: #000;
+    color:#fff;
+    padding: 10px;
+}
+.lightButton{
+    background-color: #999898;
+    color:#000;
+    padding: 10px;
+}

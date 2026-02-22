@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { TasksContext } from "./TasksBuild";
+import { TasksContext } from "./TasksContext";
 
 function TaskItem(){    
     const {tasks, taskComplet, taskDelet} = useContext(TasksContext);

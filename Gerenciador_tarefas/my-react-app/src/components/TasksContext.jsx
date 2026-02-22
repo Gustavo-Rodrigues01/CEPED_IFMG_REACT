@@ -9,6 +9,10 @@ export function TasksProvider({children}){
     const storedTasks = localStorage.getItem("tasks");
     return storedTasks ? JSON.parse(storedTasks) : [];
   });
+
+    const [numIncomplet, setNumIncomplete] = useState(0)
+
+
 //Titulo de documento dinamico "TaskMaster"
   useEffect(() => {
     const pendingTasks = tasks.filter(task => !task.isCompleted).length;
@@ -19,6 +23,12 @@ export function TasksProvider({children}){
     useEffect(()=>{
       localStorage.setItem("tasks", JSON.stringify(tasks));
     },[tasks]);
+
+//altera o numero de tasks incompletas
+    useEffect(()=>{
+        TasksIncomplet()
+    },[tasks])
+
 
 //Marca tasks como completas
     function taskComplet(taskId){
@@ -47,8 +57,14 @@ export function TasksProvider({children}){
 
       setTasks([...tasks, newTask])
     }
+
+//Retorna tasks pendentes
+    function TasksIncomplet(){
+        const newNum = tasks.filter(tasks => tasks.isCompleted !== true)
+        setNumIncomplete(newNum.length)
+    }
     return(
-        <TasksContext.Provider value={{tasks, taskComplet, taskDelet, taskAdd}}>
+        <TasksContext.Provider value={{tasks, numIncomplet, taskComplet, taskDelet, taskAdd, TasksIncomplet}}>
             {children}
         </TasksContext.Provider>
     )

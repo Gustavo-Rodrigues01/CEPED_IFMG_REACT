@@ -2,8 +2,8 @@ import "./App.css"
 import TaskForm from "./components/TaskForm";
 import TaskItem from "./components/taskItem";
 import Header from "./components/Header";
-import { TasksProvider } from "./components/TasksContext";
-import { ThemeProvider } from "./components/themeContext";
+import { TasksProvider } from "./Context/TasksContext";
+import { ThemeProvider } from "./Context/themeContext";
 
 
 function App() {

@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { TasksContext } from "./TasksContext";
-import { ThemeContext } from "./themeContext";
+import { TasksContext } from "../Context/TasksContext";
+import { ThemeContext } from "../Context/themeContext";
 function Header(){
      const {numIncomplet} = useContext(TasksContext);
      const {toogleTheme} = useContext(ThemeContext)

@@ -13,7 +13,7 @@ function App() {
 
       <ThemeProvider>
         <TasksProvider>
-          <div className="bg-white dark:bg-gray-800">
+          <div>
             <Header/>
             <div className="space-y-4 p-6">
               <TaskForm/>

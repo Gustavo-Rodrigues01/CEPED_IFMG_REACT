@@ -1,3 +1,6 @@
+import { BrowserRouter, Routes} from 'react-router-dom';
+import Menu from './components/Menu';
+import AppRoutes from './components/AppRoutes';
 function App() {
   
   return (
@@ -6,6 +9,10 @@ function App() {
       <p>Feita diretamente no arquivo aulas</p>
 
       <h1>Atividade 2</h1>
+      <BrowserRouter>
+       <Menu/>
+       <AppRoutes/>
+      </BrowserRouter>
     </>
   )
 }

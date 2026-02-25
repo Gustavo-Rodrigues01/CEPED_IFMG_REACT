@@ -5,13 +5,13 @@ function Header(){
      const {numIncomplet} = useContext(TasksContext);
      const {toogleTheme} = useContext(ThemeContext)
     return(
-        <div className="bg-blue-200 dark:bg-blue-900
+        <div className="bg-blue-300 dark:bg-blue-900
             text-black dark:text-white
             flex 
             flex-row 
             p-4 
             space-y-2
-            justify-evenly
+            justify-between
             "
         >
             <p>Status Header:{numIncomplet} pending</p>

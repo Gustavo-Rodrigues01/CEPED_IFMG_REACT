@@ -4,7 +4,7 @@ import { TasksContext } from "../Context/TasksContext";
 function TaskItem(){    
     const {tasks, taskComplet, taskDelet} = useContext(TasksContext);
    return(
-    <div className="text-3xl w-500px bg-blue-200 dark:bg-blue-900 text-black dark:text-white flex flex-col p-4 space-y-2 rounded-2xl">
+    <div className="text-3xl w-500px bg-blue-300 dark:bg-blue-900 text-black dark:text-white flex flex-col p-4 space-y-2 rounded-2xl">
         <h1 className="text-center">Task List</h1>
         
         <div className="space-y-4">{tasks.map((tasks)=>(

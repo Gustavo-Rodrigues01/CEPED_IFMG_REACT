@@ -5,7 +5,7 @@ function TasksComplet(){
     const { tasks } = useContext(TasksContext)
 
     return (
-        <div className="text-3xl w-500px bg-blue-300 dark:bg-blue-900 text-black dark:text-white flex flex-col p-4 space-y-2 rounded-2xl">
+        <div className="text-3xl w-500px bg-blue-300 dark:bg-blue-900 text-black dark:text-white flex flex-col p-4 space-y-2 rounded-lg">
             <h1 className="dark:text-white text-center">Tasks Completed</h1>
             <div className="space-y-4">
                 {tasks

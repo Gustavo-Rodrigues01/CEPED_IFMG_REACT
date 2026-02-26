@@ -1,4 +1,3 @@
-import TaskItem from "./taskItem";
 
 function TaskList(){
  return(

@@ -22,9 +22,10 @@ function Header(){
             p-4 
             space-y-2
             justify-between
+            rounded-md
             "
         >
-            <p>Status Header:{numIncomplet} pending</p>
+            <p>Status: {numIncomplet} pending</p>
             <nav>
                       <NavLink style={navLinkStyles} to="/">Home</NavLink>|{" "}
                       <NavLink style={navLinkStyles} to="/Project">Projects</NavLink>|{" "}

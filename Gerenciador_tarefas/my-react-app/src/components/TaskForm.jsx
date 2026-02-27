@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useContext } from "react";
 import { TasksContext } from "../Context/TasksContext";
-import TaskItem from "./TaskItem";
+import TaskList from "./TaskList";
 
 function TaskForm(){
     const [title, setTitle] = useState("")
@@ -35,7 +35,7 @@ function TaskForm(){
                 </div>
 
             </div>
-            <TaskItem/>
+            <TaskList/>
         </div>
         
     )

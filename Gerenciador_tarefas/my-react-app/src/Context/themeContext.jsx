@@ -4,7 +4,14 @@ import { useEffect } from "react";
 export const ThemeContext = createContext();
 
 export function ThemeProvider({children}){
-    const [dark, setDark] = useState(false)
+    const [dark, setDark] = useState(() => {
+        try {
+            const storedTheme = localStorage.getItem("dark");
+            return storedTheme ? JSON.parse(storedTheme) : false;
+        } catch {
+            return false;
+        }
+    });
     useEffect(() => {
         if (dark) {
             document.documentElement.classList.add("dark");
@@ -12,6 +19,9 @@ export function ThemeProvider({children}){
             document.documentElement.classList.remove("dark");
         }
     }, [dark]);
+    useEffect(()=>{
+        localStorage.setItem("dark", JSON.stringify(dark));
+    },[dark]);
 
 
     function toogleTheme(){

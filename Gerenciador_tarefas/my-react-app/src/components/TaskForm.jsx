@@ -10,7 +10,7 @@ function TaskForm(){
     return(
         <div className="space-y-2">
             <div className="bg-blue-300 dark:bg-blue-900 text-black dark:text-white rounded-2xl flex flex-col p-4 space-y-2">
-                <h1 className="text-3xl text-center">Task form</h1>
+                <h1 className="text-3xl text-center">Tasks form</h1>
                 <div className="flex space-x-2">
                 
                     <input 

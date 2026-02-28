@@ -8,6 +8,8 @@ import { ProjectProvider } from "./Context/ProjectContext";
 import ProjectForm from "./components/ProjectForm";
 import TasksComplet from "./components/TasksComplet";
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+import TaskProject from "./components/TaskProject";
+import TaskProjectForm from "./components/TaskProjectForm";
 
 
 
@@ -17,22 +19,24 @@ function App() {
     <>
 
       <ThemeProvider>
-        <ProjectProvider>
-          <TasksProvider>
-             <BrowserRouter>
-                <Header/>
-                <div className="space-y-4 p-6">
-                  <Routes>
-                    <Route path="/" element={<TaskForm/>}/>
-                    <Route path="/Project" element={<ProjectForm/>}/>
-                    <Route path="/Historic" element={<TasksComplet/>}/>
-                  </Routes>
-                  
-                </div>
-              </BrowserRouter>
-          </TasksProvider>
-        </ProjectProvider>
-       
+        <BrowserRouter>
+          <ProjectProvider>
+            <TasksProvider>
+              
+                  <Header/>
+                  <div className="space-y-4 p-6">
+                    <Routes>
+                      <Route path="/" element={<TaskForm/>}/>
+                      <Route path="/Project" element={<ProjectForm/>}/>
+                      <Route path="/Historic" element={<TasksComplet/>}/>
+                      <Route path="/tasks/:id" element={<TaskProjectForm/>}/>
+                    </Routes>
+                    
+                  </div>
+              
+            </TasksProvider>
+          </ProjectProvider>
+        </BrowserRouter>
     </ThemeProvider>
     </>
   );

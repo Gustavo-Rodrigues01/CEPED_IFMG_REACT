@@ -7,7 +7,7 @@ function TaskList() {
 
   return (
     <div className="text-3xl bg-blue-300 dark:bg-blue-900 text-black dark:text-white flex flex-col p-4 space-y-2 rounded-lg">
-      <h1 className="text-center">Task List</h1>
+      <h1 className="text-center">Daily tasks</h1>
 
       <div className="space-y-4">
         {tasks.map((task) => (

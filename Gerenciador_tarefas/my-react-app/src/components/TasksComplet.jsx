@@ -1,8 +1,10 @@
 import { useContext } from "react"
 import { TasksContext } from "../Context/TasksContext"
+import { ProjectContext } from "../Context/ProjectContext"
 
 function TasksComplet(){
-    const { tasks } = useContext(TasksContext)
+    const { tasks} = useContext(TasksContext)
+    const { tasksProject } = useContext(ProjectContext)
 
     return (
         <div className="text-3xl w-500px bg-blue-300 dark:bg-blue-900 text-black dark:text-white flex flex-col p-4 space-y-2 rounded-lg">
@@ -17,6 +19,17 @@ function TasksComplet(){
                             </p>
                         </div>
                     ))
+                }
+                {tasksProject
+                    .filter((tasks) => tasks.isCompleted)
+                    .map((tasks) => (
+                        <div key={tasks.id} className="flex space-x-2">
+                            <p className="text-2xl w-full bg-white dark:bg-gray-700 flex flex-col p-2 space-y-2 rounded-md">
+                                {tasks.title}
+                            </p>
+                        </div>
+                    ))
+
                 }
             </div>
         </div>

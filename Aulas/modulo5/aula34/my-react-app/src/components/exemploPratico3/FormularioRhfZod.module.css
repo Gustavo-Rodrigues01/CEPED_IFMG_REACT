@@ -1,0 +1,15 @@
+.countainer{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items:center;
+    margin: 10px;
+    border: solid white 1px;
+    border-radius: 5px;
+    padding: 20px
+}
+
+.error{
+    color: red;
+    opacity: 80%;
+}

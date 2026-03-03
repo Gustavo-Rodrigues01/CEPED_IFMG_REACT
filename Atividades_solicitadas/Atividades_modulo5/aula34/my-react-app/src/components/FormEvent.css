@@ -1,0 +1,18 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.error{
+    color: red;
+    font-size:small;
+}
+
+button{
+    background-color: rgb(109, 109, 109);
+    color: white;
+    height: 30px;
+    border-radius: 10px;
+    border-bottom: rgb(32, 31, 31);
+}

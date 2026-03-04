@@ -15,6 +15,8 @@ function TaskList() {
             key={task.id}
             taskId={task.id}
             tasksIsCompleted={task.isCompleted}
+            taskDescription={task.description}
+            taskCategory={task.category}
             tasksTitle={task.title}
           />
         ))}

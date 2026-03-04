@@ -16,6 +16,8 @@ function ProjectList(){
                     key={projects.id}
                     projectId={projects.id}
                     projectTitle={projects.title}
+                    projectDescription={projects.description}
+                    projectCategory={projects.category}
                     />
 
                 ))}</div>

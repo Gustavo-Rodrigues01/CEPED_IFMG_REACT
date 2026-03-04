@@ -48,10 +48,12 @@ export function TasksProvider({children}){
     }
 
 //Adiciona novas tarefas
-    function taskAdd(taskTitle){
+    function taskAdd(taskTitle,taskInfo, taskCategory){
       const newTask = {
         id: crypto.randomUUID(),
         title: taskTitle,
+        description: taskInfo,
+        category: taskCategory,
         isCompleted: false
       }
 

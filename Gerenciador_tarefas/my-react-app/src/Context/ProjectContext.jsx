@@ -30,21 +30,25 @@ export function ProjectProvider({children}){
 
 
 //Cria novo projeto
-    function projectAdd(projectTitle){
-      const newProject = {
-        id: crypto.randomUUID(),
-        title: projectTitle,
-        isCompleted: false
-      }
-      setProject([...project, newProject])
+    function projectAdd(projectTitle, projectDescription, projectCategory){
+        const newProject = {
+            id: crypto.randomUUID(),
+            title: projectTitle,
+            description: projectDescription,
+            category: projectCategory,
+            isCompleted: false
+        }
+        setProject([...project, newProject])
     }
 
 //Cria nova tarefa de projeto
-    function tasksProjectsAdd(projectid, tasktitle){
+    function tasksProjectsAdd(projectid, tasktitle,projectDescription, projectCategory){
         const newTaskProject = {
             id: crypto.randomUUID(),
             idProject: projectid,
             title: tasktitle,
+            description: projectDescription,
+            category: projectCategory,
             isCompleted: false
         }
         setTasksProject([...tasksProject, newTaskProject])

@@ -29,7 +29,7 @@ function TaskProject() {
             <>
               <div key={task.id} className="flex items-center gap-2">
                 <button
-                  className={`text-2xl w-full bg-white dark:bg-gray-700 flex flex-col p-2 space-y-2 rounded-md ${
+                  className={`text-2xl w-full bg-white dark:bg-gray-700 flex flex-col p-2 space-y-2 rounded-md items-start ${
                     task.isCompleted ? "line-through text-gray-400" : ""}`}
                   onClick={() => {showDescription()}}
                 >{task.title}</button>

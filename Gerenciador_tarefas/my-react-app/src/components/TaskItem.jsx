@@ -15,12 +15,11 @@ function TaskItem({ taskId, tasksIsCompleted, tasksTitle, taskDescription, taskC
     <div>
       <div className="flex items-center space-x-2">
         <button
-          className={`text-2xl w-full bg-white dark:bg-gray-700 p-2 rounded-md ${
+          className={`text-2xl w-full bg-white dark:bg-gray-700 flex flex-col p-2 space-y-2 rounded-md items-start ${
           tasksIsCompleted ? "line-through text-gray-400" : ""}`}
           onClick={() => {showDescription()}}
         >{tasksTitle}</button>
-
-        <button
+       <button
           onClick={() => taskComplet(taskId)}
           className="bg-white dark:bg-gray-900 rounded-md w-[60px] h-[50px] flex items-center justify-center"
         ><Check color="green" size={30} /></button>

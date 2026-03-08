@@ -1,7 +1,7 @@
 import { ProjectContext } from "../Context/ProjectContext";
 import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
-import TaskProject from "./TaskProject";
+import TaskProject from "./TaskProjectItem";
 import {useForm} from "react-hook-form"
 import {zodResolver} from "@hookform/resolvers/zod"
 import { formSchema } from "../Context/TasksFormhook";
@@ -9,6 +9,7 @@ import { formSchema } from "../Context/TasksFormhook";
 function TaskProjectForm() {
   const { id } = useParams();
   const { tasksProjectsAdd } = useContext(ProjectContext);
+  
 
    const {
             register,
@@ -70,8 +71,6 @@ function TaskProjectForm() {
           >Add</button>
         </form>
       </div>
-
-      <TaskProject />
     </div>
   );
 }

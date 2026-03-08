@@ -1,7 +1,6 @@
 import {useForm} from "react-hook-form"
 import {zodResolver} from "@hookform/resolvers/zod"
 import { formSchema } from "../Context/TasksFormhook";
-import TaskList from "./TaskList";
 import { TasksContext } from "../Context/TasksContext";
 import { useContext } from "react";
 
@@ -58,7 +57,6 @@ function TaskForm(){
                     <option value="Estudos">Estudos</option>
                     <option value="Trabalho">Trabalho</option>
                     <option value="Pessoal">Pessoal</option>
-
                 </select>
                 {errors.category && (
                     <p className="text-red-500 text-sm">{errors.category.message}</p>
@@ -72,8 +70,8 @@ function TaskForm(){
             </form>
             
         </div>
-            <TaskList/>
         </div>
+
         
     )
 }

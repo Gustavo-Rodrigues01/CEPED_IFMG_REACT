@@ -26,7 +26,7 @@ export function ProjectProvider({children}){
 //Envia tarefas de projeto para a memoria do navegador
     useEffect(() => {
     localStorage.setItem("tasksproject", JSON.stringify(tasksProject))
-}, [tasksProject, project])
+}, [tasksProject])
 
 
 //Cria novo projeto
@@ -86,8 +86,40 @@ export function ProjectProvider({children}){
       setTasksProject(newTask);
     }
 
+//Editar tarefas
+    function projectEdit(projectId, newTitle, newDescription, newCategory){
+      const updatedProject = project.map((projects) => {
+        if(projects.id === projectId){
+          return {
+            ...projects,
+            title: newTitle,
+            description: newDescription,
+            category: newCategory
+          };
+        }
+      return projects;
+  });
+  setProject(updatedProject);
+    }
+
+//Editar tarefas do projeto
+    function tasksProjectEdit(taskId, newTitle, newDescription, newCategory){
+      const updatedTasksProject = tasksProject.map(taskProject => {
+        if(tasksProject.id === taskId){
+          return {
+            ...taskProject,
+            title: newTitle,
+            description: newDescription,
+            category: newCategory
+          };
+        }
+      return taskProject;
+  });
+  setTasksProject(updatedTasksProject);
+    }
+
     return(
-        <ProjectContext.Provider value={{project,tasksProject ,projectAdd, projectDelet, tasksProjectsAdd, tasksProjectsdelet, tasksLink, ProjectTaskComplet, tasksLinkReturn}}>
+        <ProjectContext.Provider value={{project,tasksProject ,projectAdd, projectDelet, tasksProjectsAdd, tasksProjectsdelet, tasksLink, ProjectTaskComplet, tasksLinkReturn, projectEdit, tasksProjectEdit}}>
             {children}
         </ProjectContext.Provider>
     )

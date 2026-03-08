@@ -1,17 +1,13 @@
 import "./App.css"
-import TaskForm from "./components/TaskForm";
 import Header from "./components/Header";
 import { TasksProvider } from "./Context/TasksContext";
 import { ThemeProvider } from "./Context/themeContext";
 import ProjectList from "./components/ProjectList";
 import { ProjectProvider } from "./Context/ProjectContext";
-import ProjectForm from "./components/ProjectForm";
 import TasksComplet from "./components/TasksComplet";
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
-import TaskProject from "./components/TaskProject";
-import TaskProjectForm from "./components/TaskProjectForm";
-
-
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import TaskList from "./components/TaskList";
+import TaskProjectList from "./components/TaskProjectList"
 
 function App() {
 
@@ -26,10 +22,10 @@ function App() {
                   <Header/>
                   <div className="space-y-4 p-6">
                     <Routes>
-                      <Route path="/" element={<TaskForm/>}/>
-                      <Route path="/Project" element={<ProjectForm/>}/>
+                      <Route path="/" element={<TaskList/>}/>
+                      <Route path="/Project" element={<ProjectList/>}/>
                       <Route path="/Historic" element={<TasksComplet/>}/>
-                      <Route path="/tasks/:id" element={<TaskProjectForm/>}/>
+                      <Route path="/tasks/:id" element={<TaskProjectList/>}/>
                     </Routes>
                     
                   </div>

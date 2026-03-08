@@ -65,8 +65,24 @@ export function TasksProvider({children}){
         const newNum = tasks.filter(tasks => tasks.isCompleted !== true)
         setNumIncomplete(newNum.length)
     }
+
+//Editar tarefas
+    function tasksEdit(taskId, newTitle, newDescription, newCategory){
+      const updatedTasks = tasks.map(task => {
+        if(task.id === taskId){
+          return {
+            ...task,
+            title: newTitle,
+            description: newDescription,
+            category: newCategory
+          };
+        }
+      return task;
+  });
+  setTasks(updatedTasks);
+    }
     return(
-        <TasksContext.Provider value={{tasks, numIncomplet, taskComplet, taskDelet, taskAdd, TasksIncomplet}}>
+        <TasksContext.Provider value={{tasks, numIncomplet, taskComplet, taskDelet, taskAdd, TasksIncomplet, tasksEdit}}>
             {children}
         </TasksContext.Provider>
     )

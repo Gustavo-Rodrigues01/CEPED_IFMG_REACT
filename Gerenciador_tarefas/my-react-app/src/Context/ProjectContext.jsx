@@ -104,18 +104,19 @@ export function ProjectProvider({children}){
 
 //Editar tarefas do projeto
     function tasksProjectEdit(taskId, newTitle, newDescription, newCategory){
-      const updatedTasksProject = tasksProject.map(taskProject => {
-        if(tasksProject.id === taskId){
-          return {
-            ...taskProject,
-            title: newTitle,
-            description: newDescription,
-            category: newCategory
-          };
+        const updatedTasksProject = tasksProject.map(taskProject => {
+        if(taskProject.id === taskId){
+            return {
+                ...taskProject,
+                title: newTitle,
+                description: newDescription,
+                category: newCategory
+            };
         }
-      return taskProject;
-  });
-  setTasksProject(updatedTasksProject);
+        return taskProject;
+        });
+
+        setTasksProject(updatedTasksProject);
     }
 
     return(

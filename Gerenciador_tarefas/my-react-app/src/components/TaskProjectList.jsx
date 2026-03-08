@@ -1,11 +1,13 @@
+import { useParams } from "react-router-dom";
 import { useContext, useState } from "react";
 import TaskProjectForm from "./TaskProjectForm";
 import { ProjectContext } from "../Context/ProjectContext";
 import TaskProjectItem from "./TaskProjectItem";
 
 function TaskProjectList(){
-    const {tasksProject} = useContext(ProjectContext)
+    const {tasksProject,tasksLinkReturn} = useContext(ProjectContext)
     const[render, setRender] = useState(false)
+    const { id } = useParams();
 
     return(
         <div className="space-y-2"> 
@@ -21,7 +23,9 @@ function TaskProjectList(){
                 >Add new Tasks</button>
            
                 <div className="space-y-4">
-                    {tasksProject.map((task) => (
+                    {tasksProject
+                    .filter(task => task.idProject === id)
+                    .map((task) => (
                         <TaskProjectItem
                         key={task.id}
                         taskProjectId={task.id}
@@ -32,8 +36,15 @@ function TaskProjectList(){
                         />
                     ))}
                 </div>
+
             </div>
-           
+    {/*Botão de retorno*/}
+            <div className="w-full flex justify-end p-3">
+                <button 
+                onClick={()=>{tasksLinkReturn()}}
+                className="bg-white dark:bg-gray-700 text-black dark:text-white rounded-md w-[100px] h-[40px] shadow"
+                >Back</button>
+            </div>
         </div>
     )
 }

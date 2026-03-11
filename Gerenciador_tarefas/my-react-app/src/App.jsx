@@ -8,6 +8,10 @@ import TasksComplet from "./components/TasksComplet";
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import TaskList from "./components/TaskList";
 import TaskProjectList from "./components/TaskProjectList"
+import DashboardTasksChart from "./components/Estatisticas";
+import WithPremiumAccess from "./hoc/withPremiumAccess";
+
+const PremiumChart = WithPremiumAccess(DashboardTasksChart);
 
 function App() {
 
@@ -20,11 +24,12 @@ function App() {
             <TasksProvider>
               
                   <Header/>
-                  <div className="space-y-4 p-6">
+                  <div className="space-y-4 p-6 font-bold">
                     <Routes>
                       <Route path="/" element={<TaskList/>}/>
                       <Route path="/Project" element={<ProjectList/>}/>
                       <Route path="/Historic" element={<TasksComplet/>}/>
+                       <Route path="/Graphic" element={<PremiumChart />} />
                       <Route path="/tasks/:id" element={<TaskProjectList/>}/>
                     </Routes>
                     

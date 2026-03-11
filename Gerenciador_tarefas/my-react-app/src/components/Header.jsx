@@ -30,6 +30,7 @@ function Header(){
                       <NavLink style={navLinkStyles} to="/">Home</NavLink>|{" "}
                       <NavLink style={navLinkStyles} to="/Project">Projects</NavLink>|{" "}
                       <NavLink style={navLinkStyles} to="/Historic">HistoricTasks</NavLink>|{" "}
+                       <NavLink style={navLinkStyles} to="/Graphic">Grapic</NavLink>|{" "}
                       <NavLink style={navLinkStyles} to="/About">About</NavLink>
                     </nav>
             <button 

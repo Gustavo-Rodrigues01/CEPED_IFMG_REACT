@@ -33,10 +33,10 @@ O repositorio é organizado em três pastas principais:
   onde, cada aula contem as atividades correspondentes ao que foi passado em sala.
   
 * ### 📂 Aulas
-É aqui onde ficam salvos os exemplos e arquivos desenvolvidos durante as aulas. Esta pagina contem as aulas tanto presenciais quanto remotas
+  É aqui onde ficam salvos os exemplos e arquivos desenvolvidos durante as aulas. Esta pagina contem as aulas tanto presenciais quanto      remotas
 
 * ### 📂 Gerenciador de tarefas
-* è aqui onde foi salvo cada alteração do projeto de aplicação react durante o curso
+  É aqui onde foi salvo cada alteração do projeto de aplicação react durante o curso
 ---
 ## 📦 Como executar
 
